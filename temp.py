@@ -58,3 +58,36 @@ for i in items:
     if "w" in i:
         acc_num += 1
 print(acc_num)
+
+"""4) Write code that counts the number of words in sentence that contain either an “a” or an “e”. Store the result in the variable num_a_or_e.
+
+Note 1: be sure to not double-count words that contain both an a and an e."""
+
+sentence = "python is a high level general purpose programming language that can be applied to many different classes of problems."
+sentence = sentence.split(" ")
+num_a_or_e = 0
+for i in sentence:
+    if "a" and "e" in i:
+        num_a_or_e += 1
+    elif "a" in i:
+        num_a_or_e += 1
+    elif "e" in i:
+        num_a_or_e += 1
+
+
+print(num_a_or_e)
+
+
+"""5) Write code that will count the number of vowels in the sentence s and assign the result to the variable num_vowels. For this problem, vowels are only a, e, i, o, and u. Hint: use the in operator with vowels."""
+s = "singing in the rain and playing in the rain are two entirely different situations but both can be fun"
+vowels = ['a','e','i','o','u']
+
+# Write your code here.
+num_vowels = 0
+
+for i in s:
+    for v in vowels:
+        if i == v:
+            num_vowels +=1
+print(num_vowels)
+
