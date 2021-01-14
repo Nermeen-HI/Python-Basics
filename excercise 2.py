@@ -48,3 +48,14 @@ for word in contents:
     
 print(three)
 
+""" Taking the same previous example but this time I want the list 'three' to contain the third word of each line"""
+
+schoolprompt = open("school_prompt.txt", "r")
+contents = schoolprompt.readlines()
+#print(contents)
+three = []
+for c in contents:
+    words = c.split(" ")
+    #print(words)
+    three.append(words[2])
+print(three)
