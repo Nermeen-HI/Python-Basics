@@ -17,3 +17,34 @@ for i in org:
         acro += i[0:1].upper()
         
 print(acro)            
+
+
+"""We have provided a file called emotion_words.txt that contains lines of words that describe emotions. Find the total number of words in the file and assign this value to the variable num_words."""
+
+emotions = open("emotion_words.txt", "r")
+contents = emotions.readlines()
+num_words = 0
+for lin in contents:
+    words = lin.split(" ")
+    total_words = len(words)
+    num_words += total_words
+    
+
+   
+print(num_words)
+
+""" We have a file named school_prompt of lines of words and we want to create a list named three that contains words composed of up to 3 letters"""
+
+schoolprompt = open("school_prompt.txt", "r")
+contents = schoolprompt.readlines()
+#print(contents)
+three = []
+for word in contents:
+    words=word.split(" ")
+    #print(words)
+    for wrd in words:
+        if wrd== wrd[:3]:
+            three.append(wrd)
+    
+print(three)
+
